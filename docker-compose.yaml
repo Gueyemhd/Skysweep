@@ -1,0 +1,12 @@
+version: '2.23.3'
+services:
+  dashboard:
+    build: ./dashboard
+    container_name: dash_c
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./dashboard:/app
+      -  /app/node_modules
+    stdin_open: true
+    tty: true
