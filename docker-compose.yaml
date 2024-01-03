@@ -1,4 +1,4 @@
-version: '2.23.3'
+version: '2.3'
 services:
   dashboard:
     build: ./dashboard
