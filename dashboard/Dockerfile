@@ -14,6 +14,11 @@ RUN npm install --save google-map-react
 
 RUN npm install firebase
 
+RUN npm install axios
+
+RUN npm install react-geocode
+
+
 COPY . .
 
 EXPOSE 3000

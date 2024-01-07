@@ -1,9 +1,17 @@
 import "./topbar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import ImageIcon from '@mui/icons-material/Image';
+import {React,useState } from 'react';
 //import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 
-export default function Topbar() {
+const Topbar1 = ({ onLocationChange }) => {
+
+  const [city, setCity] = useState('');
+
+  const handleSearch = () => {
+    onLocationChange(city);
+  };
+
   return (
     <div className="topbarContainer">
       
@@ -13,7 +21,10 @@ export default function Topbar() {
           <input
             placeholder="Search for city"
             className="searchInput"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
           />
+          <button className="buttonSubmit" onClick={handleSearch}>Search</button>
         </div>
       </div>
       <div className="topbarCenter">
@@ -46,3 +57,5 @@ export default function Topbar() {
     </div>
   );
 }
+
+export default Topbar1;
