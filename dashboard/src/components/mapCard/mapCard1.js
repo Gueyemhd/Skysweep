@@ -6,10 +6,10 @@ import MenuItem from '@mui/material/MenuItem';
 
 const GoogleMap1 = ({ center, zoom }) => {
 
-    const [mapType, setMapType] = useState('satellite'); // Type de carte par défaut
+    const [mapType, setMapType] = useState('satellite');
     const [markers, setMarkers] = useState([
-      { lat: 14.6928, lng: -17.4467 }, // Exemple de coordonnées
-      { lat: 14.7110, lng: -17.4672 }, // Ajoutez plus de coordonnées si nécessaire
+      { lat: 14.6928, lng: -17.4467 },
+      { lat: 14.7110, lng: -17.4672 }, 
       { lat: 14.6760, lng: -17.4671 },
     ]);
 
@@ -36,8 +36,6 @@ const GoogleMap1 = ({ center, zoom }) => {
       <GoogleMapReact
         bootstrapURLKeys={{
           key: 'AIzaSyBB3mmlEaF5jkGsxRUkPFbRe80Lyt_PbZw',
-          // Vous pouvez également ajouter d'autres paramètres ici
-          // Par exemple : language: 'fr'
         }}
         defaultCenter={dakar}
         defaultZoom={zoom}
@@ -55,10 +53,10 @@ const GoogleMap1 = ({ center, zoom }) => {
 
 GoogleMap1.defaultProps = {
   center: {
-    lat: 37.7749, // Latitude par défaut
-    lng: -122.4194, // Longitude par défaut
+    lat: 37.7749,
+    lng: -122.4194,
   },
-  zoom: 11, // Niveau de zoom par défaut
+  zoom: 11,
 };
 
 export default GoogleMap1;

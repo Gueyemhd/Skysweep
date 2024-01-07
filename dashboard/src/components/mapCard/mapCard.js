@@ -9,38 +9,15 @@ const GoogleMap = () => {
     function initMap() {
         const dakar = { lat: 14.6928, lng: -17.4467 };
         const db = getFirestore(app);
-        const dataRef = collection(db, 'points'); // Référence à votre collection 'points' dans la base de données
+        const dataRef = collection(db, 'points');
 
-        /*
-        getDocs(dataRef)
-        .then((snapshot) => {
-          snapshot.forEach((doc) => {
-            const point = doc.data(); // Données de chaque document de la collection
-            const marker = new window.google.maps.Marker({
-              position: { lat: point.lat, lng: point.lng },
-              map: map,
-              title: `Marker at ${point.lat}, ${point.lng}`,
-            });
 
-            const infowindow = new window.google.maps.InfoWindow({
-              content: `<div id="content"><h2 id="firstHeading" class="firstHeading">Marker at ${point.lat}, ${point.lng}</h2></div>`,
-            });
 
-            marker.addListener('click', () => {
-              infowindow.open(map, marker);
-            });
-          });
-        })
-        .catch((error) => {
-          console.log('Error getting documents:', error);
-        });
-        */
-
-        const markers = {}; // Pour stocker les marqueurs
+        const markers = {};
 
       onSnapshot(dataRef, (snapshot) => {
         snapshot.docChanges().forEach((change) => {
-          const point = change.doc.data(); // Données de chaque document de la collection
+          const point = change.doc.data();
           const id = change.doc.id;
           console.log(point)
 
@@ -60,7 +37,6 @@ const GoogleMap = () => {
               infowindow.open(map, markers[id]);
             });
           } else if (change.type === 'removed') {
-            // Supprimer le marqueur s'il est supprimé de la base de données
             markers[id].setMap(null);
             delete markers[id];
           }
@@ -73,30 +49,7 @@ const GoogleMap = () => {
           mapTypeId: 'satellite',
         });
   
-        /*
-        onValue(dataRef, (snapshot) => {
-          const points = snapshot.val(); // Récupération des données de la base de données Firebase
-          //console.log(points === null)
-          if (points) {
-            // Parcourir les données récupérées et créer des marqueurs pour chaque point
-            Object.values(points).forEach((point) => {
-              const marker = new window.google.maps.Marker({
-                position: { lat: point.lat, lng: point.lng },
-                map: map,
-                title: `Marker at ${point.lat}, ${point.lng}`,
-              });
-  
-              const infowindow = new window.google.maps.InfoWindow({
-                content: `<div id="content"><h2 id="firstHeading" class="firstHeading">Marker at ${point.lat}, ${point.lng}</h2></div>`,
-              });
-  
-              marker.addListener('click', () => {
-                infowindow.open(map, marker);
-              });
-            });
-          }
-        });
-        */
+
       }
 
     if (!window.google) {
