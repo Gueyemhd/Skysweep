@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16b6417-82e6-4f92-8d24-53aa1a7988a1" name="Changes" comment="[Fix] docker-compose.yaml Version">
-      <change beforePath="$PROJECT_DIR$/dashboard/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/topbar/topbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/topbar/topbar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +131,11 @@
       <workItem from="1704469364722" duration="18000" />
       <workItem from="1704470905944" duration="42000" />
       <workItem from="1704473651056" duration="601000" />
+      <workItem from="1704561464765" duration="16000" />
+      <workItem from="1704561633138" duration="3000" />
+      <workItem from="1704566591187" duration="2000" />
+      <workItem from="1704582290489" duration="17000" />
+      <workItem from="1704584159308" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="[Fix] docker-compose.yaml Version">
       <option name="closed" value="true" />
