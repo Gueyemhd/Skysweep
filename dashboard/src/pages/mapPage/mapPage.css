@@ -1,0 +1,18 @@
+.mapPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.tolbar{
+    width: 20%;
+    height: 850px;
+    margin-top: 4px;
+    border-right: 1px solid #F4F5F4;
+}
+
+.content{
+    width: 80%;
+}
