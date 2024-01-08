@@ -3,16 +3,28 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 5px;
+    height: 95vh;
+    padding: 0px 5px;
 }
 
-.tolbar{
+.Tolbar{
     width: 20%;
-    height: 850px;
-    margin-top: 4px;
+    height: 97vh;
     border-right: 1px solid #F4F5F4;
+    background-color: #F4F5F4;
+    transition: width 0.5s ease;
 }
 
 .content{
     width: 80%;
+    height: 95vh;
+    transition: width 0.5s ease;
+}
+
+.Tolbar.closed {
+    width: 5%;
+}
+
+.content.closed{
+    width: 95%;
 }

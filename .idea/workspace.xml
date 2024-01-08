@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f16b6417-82e6-4f92-8d24-53aa1a7988a1" name="Changes" comment="[Fix] docker-compose.yaml Version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

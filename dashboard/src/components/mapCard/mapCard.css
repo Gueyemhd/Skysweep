@@ -1,16 +1,12 @@
 .topbarContainer {
-    height: 70px;
+    height: 7vh;
     width: 100%;
-    
-    
     display: flex;
     
     align-items: center;
     position: sticky;
-    top: 0;
-    z-index: 999;
+    
   }
-  
   
   .logo {
     font-size: 24px;
@@ -83,6 +79,13 @@
     background-color: #F4F5F4;
     border: none;
   }
+
+  .MapTypeDropdown{
+    background-color: white;
+    height: 50px;
+    width: 130px;
+    border-radius: 30px;
+  }
   
   .topbarImg {
     width: 25%;
@@ -100,4 +103,3 @@
   .imgIcon{
     font-size: 40px !important;
   }
-  

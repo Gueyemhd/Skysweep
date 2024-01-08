@@ -9,7 +9,9 @@
   }
 
 .TolbarContent{
+    position: relative;
     padding: 0px;
+    height: 90vh;
 }
 
 .logo{
@@ -21,9 +23,33 @@
     margin-top: 2vw;
 }
 
+.droneImg{
+    margin-top: 15px;
+    width: 80%;
+    height: 60%;
+}
+
+.logo.closed{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    
+    margin: auto;
+    margin-top: 2vw;
+}
+
 .LogoImg{
     width: 4vw;
     height: 4vw;
+    background-color: #5DB075;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.LogoImg.closed{
+    width: 4vw;
+    height: 3.8vw;
     background-color: #5DB075;
     border-radius: 10px;
 }
@@ -35,6 +61,9 @@
     width: 60%;
     font-size: 2vw;
     font-family: 'Amaranth', sans-serif;;
+}
+.NameLogo.closed{
+    display: none;
 }
 
 .donne{
@@ -51,6 +80,36 @@
     font-family: 'Amaranth', sans-serif;;
     
 }
+
+.donne img{
+    display: none;
+}
+
+.donne.closed{
+    width: 70%;
+    height: 55px;
+    padding-top: 0px;
+    text-align: center;
+    border: 2px solid #5DB075;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    color: #5DB075;
+    font-weight: 900;
+    font-family: 'Amaranth', sans-serif;
+}
+
+.donne.closed span{
+    display: none;
+}
+
+.donne.closed img{
+    display: flex;    
+    height: 100%;
+    width: 100%;
+}
+
+
 
 .carteButton{
 
@@ -71,9 +130,46 @@
     
 }
 
+.carteButton.closed{
+
+    width: 70%;
+    height: 30px;
+    margin: auto;
+    padding-top: 1px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: #5DB075;
+    background-color: #F4F5F4;
+    background-color: none;
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: 'Amaranth', sans-serif;;
+    
+}
+
+.carteButton.closed > div{
+    display: none;    
+}
+
 .MapIconButton{
     background-color: #ECFFF1;
+    color: #5DB075;
     border: none;
+}
+
+.MapIconButton.closed{
+    background-color: #ECFFF1;
+    color: #5DB075;
+    border: none;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 15px;
+    font-size: 2vw;
+}
+.MapIconButton.closed:hover{
+    background-color: #7A817A;
 }
 
 .depots{
@@ -82,10 +178,30 @@
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    font-size: 1vw;
+    margin: auto;
+    margin-top: 20px;
+    color: #7A817A;
+}
+
+.depots > div{
+    margin-top: 5px;
+}
+
+.depots.closed{
+    width: 70%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
     margin: auto;
     margin-top: 20px;
     color: #7A817A;
 
+}
+
+.depots.closed > div{
+    display: none;
 }
 
 .TrendingUpButton{
@@ -93,7 +209,21 @@
     background-color: white;
 }
 
+.TrendingUpButton.closed{
+    border: none;
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 15px;
+    font-size: 2vw;
+}
+
+.TrendingUpButton.closed:hover{
+    background-color: #7A817A;
+}
+
 .reduire{
+    position: absolute;
     width: 90%;
     height: 25px;
     margin: auto;
@@ -102,8 +232,24 @@
     justify-content: space-between;
     text-align: center;
     border-radius: 10px;
-    margin-top: 240px;
+    
     color: #7A817A;
+    bottom: 40px;
+}
+.reduire.closed{
+    width: 70%;
+    height: 25px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    
+    color: #7A817A;
+}
+
+.reduire.closed > div{
+    display: none;
 }
 
 .reduire > div{
@@ -115,14 +261,49 @@
     background-color: white;
 }
 
+.reduireButton.closed{
+    border: none;
+    background-color: white;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 15px;
+    font-size: 2vw;
+}
+
+.reduireButton.closed:hover{
+    background-color: #7A817A;
+}
+
 .deconnect{
+    position: absolute;
     width: 90%;
     height: 30px;
     display: flex;
     justify-content: space-between;
     padding: 5px;
     margin: auto;
+    left: 12px;
+    bottom: 0;
+    
     color: #7A817A;
+}
+
+.deconnect.closed{
+    width: 70%;
+    height: 25px;
+    margin: auto;
+    margin-top: -15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    color: #7A817A;
+    left: 0;
+}
+
+.deconnect.closed > div{
+    display: none;
 }
 
 .deconnect > div {
@@ -133,6 +314,21 @@
     border: none;
     background-color: white;
 }
+
+.deconnectButton.closed{
+    border: none;
+    background-color: white;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 15px;
+    font-size: 2vw;
+}
+
+.deconnectButton.closed:hover{
+    background-color: #7A817A;
+}
+
+
 
 button:hover{
     border-radius: 15px;

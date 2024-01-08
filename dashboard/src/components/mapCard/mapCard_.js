@@ -5,6 +5,8 @@ import "./mapCard.css"
 import SearchIcon from '@mui/icons-material/Search';
 import ImageIcon from '@mui/icons-material/Image';
 import axios from 'axios';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import {
   setKey,
   setDefaults,
@@ -23,7 +25,21 @@ import {
 const GoogleMap_ = ({ initialCenter }) => {
 
     const [map, setMap] = useState(null);
+
     const [center, setCenter] = useState(initialCenter);
+
+    const [mapType, setMapType] = useState('satellite');
+
+    const handleChange = (event) => {
+      setMapType(event.target.value);
+    };
+
+    useEffect(() => {
+      if (map && mapType) {
+        map.setMapTypeId(mapType); 
+        console.log(map.center)
+      }
+    }, [map, mapType]);
 
     useEffect(() => {
         function initMap() {
@@ -35,14 +51,38 @@ const GoogleMap_ = ({ initialCenter }) => {
             const mapInstance = new window.google.maps.Map(document.getElementById('map'), {
                 center: initialCenter,
                 zoom: 12,
-                mapTypeId: 'satellite',
+                mapTypeId: mapType,
             });
 
-            /*
-            mapInstance.addListener('click', (e) => {
-                setCenter({ lat: 14.7928, lng: -17.4467 });
+            const markers = {};
+
+            onSnapshot(dataRef, (snapshot) => {
+              snapshot.docChanges().forEach((change) => {
+                const point = change.doc.data();
+                const id = change.doc.id;
+                console.log(point)
+
+                if (change.type === 'added' || change.type === 'modified') {
+                  // Créer ou mettre à jour le marqueur
+                  markers[id] = new window.google.maps.Marker({
+                    position: { lat: point.lat, lng: point.lng },
+                    map: mapInstance,
+                    title: `Marker at ${point.lat}, ${point.lng}`,
+                  });
+
+                  const infowindow = new window.google.maps.InfoWindow({
+                    content: `<div id="content"><h2 id="firstHeading" class="firstHeading">Marker at ${point.lat}, ${point.lng}</h2></div>`,
+                  });
+
+                  markers[id].addListener('click', () => {
+                    infowindow.open(mapInstance, markers[id]);
+                  });
+                } else if (change.type === 'removed') {
+                  markers[id].setMap(null);
+                  delete markers[id];
+                }
+              });
             });
-            */
             
             setMap(mapInstance);
         }
@@ -61,7 +101,7 @@ const GoogleMap_ = ({ initialCenter }) => {
 
     useEffect(() => {
         if (map && center) {
-          map.setCenter(center);
+          map.setCenter(center); 
           console.log(map.center)
         }
     }, [map, center]);
@@ -138,6 +178,15 @@ const GoogleMap_ = ({ initialCenter }) => {
             </select>
           </div>
 
+          <div>
+            <Select className="MapTypeDropdown" value={mapType} onChange={handleChange} style={{ position: 'absolute', top: 800, left: 100, zIndex:100}}>
+              <MenuItem value="roadmap">Plan</MenuItem>
+              <MenuItem value="satellite">Satellite</MenuItem>
+              <MenuItem value="hybrid">Hybride</MenuItem>
+              <MenuItem value="terrain">Relief</MenuItem>
+            </Select>
+          </div>
+
           <div className="topbarImg">
           <ImageIcon className = "imgIcon"/>
           <div className="Note">Images</div>
@@ -145,7 +194,9 @@ const GoogleMap_ = ({ initialCenter }) => {
         </div>
       </div>
 
-      <div id="map" style={{ height: '800px', width: '100%' }}></div>
+
+
+      <div id="map" style={{ height: '90vh', width: '100%' }}></div>
 
     </div>
   )

@@ -24,16 +24,21 @@ const MapPage1 = () => {
         });
     };
 
+    const [isOpen, setIsOpen] = useState(true);
+
+    const handleToggle = (state) => {
+      setIsOpen(state);
+    };
 
     return (
         
         <div className='mapPage'>
             
-            <div className='tolbar'>
-                <Tolbar/>
+            <div className={`Tolbar ${isOpen ? 'open' : 'closed'}`}>
+                <Tolbar isOpen={isOpen} onToggle={handleToggle}/>
             </div>
 
-            <div className='content'>
+            <div className={`content ${isOpen ? 'open' : 'closed'}`} >
                 <GoogleMap_ initialCenter={mapCenter}/>
             </div>
         </div>

@@ -13,7 +13,7 @@ const GoogleMap = () => {
 
 
 
-        const markers = {};
+      const markers = {};
 
       onSnapshot(dataRef, (snapshot) => {
         snapshot.docChanges().forEach((change) => {
