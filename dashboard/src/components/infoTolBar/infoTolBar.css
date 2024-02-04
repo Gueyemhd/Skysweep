@@ -11,13 +11,13 @@
 .TolbarContent{
     padding: 0px;
     height: 100vh;
+    width: 20%;
 }
 
 .logo{
     display: flex;
     justify-content: space-between;
     width: 70%;
-    
     margin: auto;
     margin-top: 2vw;
 }
@@ -86,12 +86,44 @@
     margin: auto;
     margin-top: 20px;
     color: #7A817A;
+    margin-bottom: 40px;
 
 }
 
 .TrendingUpButton{
     border: none;
     background-color: white;
+}
+
+.inf{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.inf div{
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: 'Amaranth', sans-serif;;
+}
+
+.green{
+    color: #5DB075;
+    margin-right: 20px;
+}
+
+.retirer{
+    margin-top: 175px;
+    height: 5vh;
+    border: none;
+    width: 150px;
+    font-size: 1.2vw;
+    font-weight: 900;
+    border-radius: 15px;
+    font-family: 'Amaranth', sans-serif;
+    margin-left: 10vw;
+    background-color: #5DB075;
 }
 
 .reduire{
@@ -103,7 +135,7 @@
     justify-content: space-between;
     text-align: center;
     border-radius: 10px;
-    margin-top: 240px;
+    margin-top: 5vh;
     color: #7A817A;
 }
 
@@ -116,27 +148,8 @@
     background-color: white;
 }
 
-.deconnect{
-    width: 90%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    margin: auto;
-    color: #7A817A;
-}
-
-.deconnect > div {
-    padding-top: 5px;
-}
-
-.deconnectButton{
-    border: none;
-    background-color: white;
-}
-
 button:hover{
     border-radius: 15px;
-    background-color: #7A817A;
+    background-color: #5DB075;
 }
 
