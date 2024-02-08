@@ -1,11 +1,17 @@
-import './App.css';
+// App.js
+
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Login from './Login';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello World!</h1>
-     <h1> this is Skysweep!</h1>
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/" component={login} />
+     
+      </div>
+    </Router>
   );
 }
 
