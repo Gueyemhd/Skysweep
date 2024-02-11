@@ -196,7 +196,7 @@ const GoogleMap_ = ({ initialCenter }) => {
 
 
 
-      <div id="map" style={{ height: '90vh', width: '100%' }}></div>
+      <div id="map" style={{ height: '93vh', width: '100%' }}></div>
 
     </div>
   )

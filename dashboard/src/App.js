@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GoogleMap from './components/mapCard/mapCard';
 import GoogleMap1 from './components/mapCard/mapCard1';
 
@@ -8,9 +9,14 @@ import MapPage1 from './pages/mapPage/mapPage1';
 
 function App() {
   return (
-    <div className="App">
-      <MapPage1/>      
+    <Router>
+      <div className="App">
+        <Routes>
+        <Route path="/" element={ <MapPage1/>} />
+        </Routes>
+         
     </div>
+    </Router>
   );
 }
 
