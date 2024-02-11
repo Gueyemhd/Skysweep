@@ -1,0 +1,155 @@
+/* latin */
+@font-face {
+    font-family: 'Amaranth';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/amaranth/v18/KtkuALODe433f0j1zMnFHdA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+.TolbarContent{
+    padding: 0px;
+    height: 100vh;
+    width: 20%;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-top: 2vw;
+}
+
+.LogoImg{
+    width: 4vw;
+    height: 4vw;
+    background-color: #5DB075;
+    border-radius: 10px;
+}
+
+.NameLogo{
+    padding-top: 0.7vw;
+    color: black;
+    text-align: center;
+    width: 60%;
+    font-size: 2vw;
+    font-family: 'Amaranth', sans-serif;;
+}
+
+.donne{
+    width: 98%;
+    height: 40px;
+    padding-top: 15px;
+    text-align: center;
+    border: 2px solid #5DB075;
+    border-radius: 10px;
+    margin-top: 100px;
+    color: #5DB075;
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: 'Amaranth', sans-serif;;
+    
+}
+
+.carteButton{
+
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: #5DB075;
+    background-color: #ECFFF1;
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: 'Amaranth', sans-serif;;
+    
+}
+
+.MapIconButton{
+    background-color: #ECFFF1;
+    border: none;
+}
+
+.depots{
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    color: #7A817A;
+    margin-bottom: 40px;
+
+}
+
+.TrendingUpButton{
+    border: none;
+    background-color: white;
+}
+
+.inf{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.inf div{
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: 'Amaranth', sans-serif;;
+}
+
+.green{
+    color: #5DB075;
+    margin-right: 20px;
+}
+
+.retirer{
+    margin-top: 175px;
+    height: 5vh;
+    border: none;
+    width: 150px;
+    font-size: 1.2vw;
+    font-weight: 900;
+    border-radius: 15px;
+    font-family: 'Amaranth', sans-serif;
+    margin-left: 10vw;
+    background-color: #5DB075;
+}
+
+.reduire{
+    width: 90%;
+    height: 25px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 5vh;
+    color: #7A817A;
+}
+
+.reduire > div{
+    padding-top: 5px;
+}
+
+.reduireButton{
+    border: none;
+    background-color: white;
+}
+
+button:hover{
+    border-radius: 15px;
+    background-color: #5DB075;
+}
+
