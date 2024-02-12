@@ -11,11 +11,12 @@ function App() {
   return (
     <Router>
       <div className="App">
+        
         <Routes>
-        <Route path="/" element={ <MapPage1/>} />
+          <Route path="/" element={ <MapPage1/>} />
         </Routes>
          
-    </div>
+      </div>
     </Router>
   );
 }
