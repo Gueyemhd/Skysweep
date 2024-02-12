@@ -5,12 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCB8zE53vZXXhcSHcQxKCwFNvns0BqWseU",
-  authDomain: "skysweep-200a8.firebaseapp.com",
-  projectId: "skysweep-200a8",
-  storageBucket: "skysweep-200a8.appspot.com",
-  messagingSenderId: "773671528629",
-  appId: "1:773671528629:web:7849c0b5c642a9fefd36fc"
+  apiKey: "AIzaSyBUBB0XkbaSN-fmqKRFfQJVIcaYG7_nlgs",
+  authDomain: "skysweep-393a1.firebaseapp.com",
+  projectId: "skysweep-393a1",
+  storageBucket: "skysweep-393a1.appspot.com",
+  messagingSenderId: "289830187257",
+  appId: "1:289830187257:web:b6ba8674911bd90da77228",
+  measurementId: "G-EKPGNKTJLM"
 };
 
 // Initialize Firebase

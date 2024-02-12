@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16b6417-82e6-4f92-8d24-53aa1a7988a1" name="Changes" comment="[Fix] docker-compose.yaml Version">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/infoTolBar/infoTolBar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/infoTolBar/infoTolBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard_.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard_.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/InfoDepot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/infoDepot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/mapPage/mapPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/pages/mapPage/mapPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/services/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/services/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/dashboard/package.json" root0="FORCE_HIGHLIGHTING" />
@@ -68,13 +79,6 @@
   <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Trans" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Trans" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,6 +139,7 @@
       <workItem from="1704582290489" duration="17000" />
       <workItem from="1704584159308" duration="2147000" />
       <workItem from="1704963049701" duration="599000" />
+      <workItem from="1707777565244" duration="419000" />
     </task>
     <task id="LOCAL-00001" summary="[Fix] docker-compose.yaml Version">
       <option name="closed" value="true" />
@@ -149,6 +154,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./tolbar.css"
 import MapIcon from '@mui/icons-material/Map';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
@@ -23,7 +24,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
 
 
     return (
-        <div className={`TolbarContent ${isOpen1 ? 'open' : 'closed'}`}>
+        <nav className={`TolbarContent ${isOpen1 ? 'open' : 'closed'}`}>
             <div className={`logo ${isOpen1 ? 'open' : 'closed'}`}>
                 <div className={`LogoImg ${isOpen1 ? 'open' : 'closed'}`}>
                   <img className='droneImg' src={droneImage} />
@@ -80,7 +81,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
             </div>
 
 
-        </div>
+        </nav>
     );
 }
 
