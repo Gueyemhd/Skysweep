@@ -11,7 +11,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const InfoTolBar = () => {
     return (
-        <div className='TolbarContent'>
+        <div className='infoTolbarContent'>
             <div className='logo'>
                 <div className='LogoImg'>
 
