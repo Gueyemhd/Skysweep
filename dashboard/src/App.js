@@ -11,11 +11,12 @@ import InfoPage from './pages/InfoDepot';
 function App() {
   return (
     <Router>
+
       <div className="App">
         
         <Routes>
-        <Route path="/" element={ <MapPage1/>} />
-        <Route path="/info" element={ <InfoPage/>} />
+          <Route path="/" element={ <MapPage1/>} />
+          <Route path="/info" element={ <InfoPage/>} />
         </Routes>
          
       </div>
