@@ -6,6 +6,7 @@ import GoogleMap1 from './components/mapCard/mapCard1';
 import Topbar from "./components/topbar/Topbar";
 import MapPage from './pages/mapPage/mapPage';
 import MapPage1 from './pages/mapPage/mapPage1';
+import InfoPage from './pages/InfoDepot';
 
 function App() {
   return (
