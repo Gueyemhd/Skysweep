@@ -176,23 +176,6 @@ const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
 
         </div>
         <div className="topbarRight">
-          <div className="topbarDropdown">
-            <select className="dropdown" id="nameRubrique">
-              <option value="Cantonade">Cantonade</option>
-              <option value="Relais">Relais</option>
-              <option value="Eclaire">Eclaire</option>
-              <option value="Identification">Identification</option>
-            </select>
-          </div>
-
-          <div className="topbarDropdown">
-            <select className="dropdown" id="nameRubrique">
-              <option value="Cantonade">Cantonade</option>
-              <option value="Relais">Relais</option>
-              <option value="Eclaire">Eclaire</option>
-              <option value="Identification">Identification</option>
-            </select>
-          </div>
 
           <div>
             <Select className="MapTypeDropdown" value={mapType} onChange={handleChange} style={{ position: 'absolute', top: 800, left: 100, zIndex:100}}>
