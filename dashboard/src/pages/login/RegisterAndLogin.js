@@ -16,7 +16,7 @@ function RegisterAndLogin() {
 
   const database = getAuth(app);
 
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
 
   const history = useNavigate();
 
@@ -80,6 +80,7 @@ function RegisterAndLogin() {
                 <br />
             </form>
 
+            {/* Registration and login Screen 
             <div className="row">
                 <div
                 className={login == false ? "activeColor" : "pointer"}
@@ -95,6 +96,9 @@ function RegisterAndLogin() {
                 Se Connecter
                 </div>
             </div>
+          */}
+            
+            
 
         </div>
 

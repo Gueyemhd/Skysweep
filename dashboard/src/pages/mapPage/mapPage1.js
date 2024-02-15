@@ -9,8 +9,8 @@ import axios from 'axios';
 import GoogleMap_ from '../../components/mapCard/mapCard_';
 
 const MapPage1 = () => {
-    const [mapCenter, setMapCenter] = useState({ lat: 14.6928, lng: -17.4467 });
-
+    const [mapCenter, setMapCenter] = useState({ lat: 14.758395, lng: -17.394008 });
+    //14.758395, -17.394008
 
     const handleLocationChange = (city) => {
       axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBB3mmlEaF5jkGsxRUkPFbRe80Lyt_PbZw`)
@@ -39,7 +39,7 @@ const MapPage1 = () => {
             </div>
 
             <div className={`content ${isOpen ? 'open' : 'closed'}`} >
-                <GoogleMap_ initialCenter={mapCenter}/>
+                <GoogleMap_ initialCenter={mapCenter} initialZoom = {13} />
             </div>
         </div>
     );

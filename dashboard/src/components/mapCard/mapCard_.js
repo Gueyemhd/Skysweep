@@ -3,6 +3,7 @@ import app from '../../services/firebase';
 import {getFirestore, collection, onSnapshot} from 'firebase/firestore'
 import "./mapCard.css"
 import SearchIcon from '@mui/icons-material/Search';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ImageIcon from '@mui/icons-material/Image';
 import axios from 'axios';
 import Select from '@mui/material/Select';
@@ -22,11 +23,13 @@ import {
 
 
 
-const GoogleMap_ = ({ initialCenter }) => {
+const GoogleMap_ = ({ initialCenter, initialZoom }) => {
 
     const [map, setMap] = useState(null);
 
     const [center, setCenter] = useState(initialCenter);
+
+    const [zoom, setZoom] = useState(initialZoom);
 
     const [mapType, setMapType] = useState('satellite');
 
@@ -50,7 +53,7 @@ const GoogleMap_ = ({ initialCenter }) => {
 
             const mapInstance = new window.google.maps.Map(document.getElementById('map'), {
                 center: initialCenter,
-                zoom: 12,
+                zoom: initialZoom,
                 mapTypeId: mapType,
             });
 
@@ -102,23 +105,46 @@ const GoogleMap_ = ({ initialCenter }) => {
     useEffect(() => {
         if (map && center) {
           map.setCenter(center); 
+          map.setZoom(zoom); 
           console.log(map.center)
         }
     }, [map, center]);
 
     const [city, setCity] = useState('');
 
-    
+    const cities = {
+      "dakar": { lat: 14.6928, lng: -17.4467 },
+      "pikine": {lat: 14.758395, lng: -17.394008 },
+      "yoff" : {lat : 14.747070, lng : -17.490230}
+      // Ajoutez d'autres villes avec leurs coordonnées
+    };
+
+    /*
     const handleSearch = () => {
       axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBB3mmlEaF5jkGsxRUkPFbRe80Lyt_PbZw`)
         .then(response => {
           //const location = response.data.results[0].geometry.location;
           setCenter({ lat: 14.7928, lng: -17.4467 });
+          setZoom(15)
           //console.log(mapCenter)
         })
         .catch(error => {
           console.error('Erreur lors de la récupération des données:', error);
         });
+    };
+    */
+
+    const handleSearch = () => {
+      // Vérifie si la ville est dans la liste
+      if (city.toLowerCase() in cities) {
+        // Récupère les coordonnées de la ville
+        const { lat, lng } = cities[city.toLowerCase()];
+        // Centre la carte sur les coordonnées de la ville
+        setCenter({ lat, lng });
+        setZoom(15);
+      } else {
+        console.log("Ville non trouvée dans la liste.");
+      }
     };
     
 
@@ -153,7 +179,7 @@ const GoogleMap_ = ({ initialCenter }) => {
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
-            <button className="buttonSubmit" onClick={handleSearch}>Search</button>
+            <button className="buttonSubmit" onClick={handleSearch}><HelpOutlineIcon className="HelpOutlineIcon" /></button>
           </div>
         </div>
         <div className="topbarCenter">
