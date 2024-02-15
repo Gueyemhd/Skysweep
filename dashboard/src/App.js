@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Redirect, Navigate } from "reac
 
 import MapPage1 from './pages/mapPage/mapPage1';
 import MapPage_depot from './pages/mapPage/mapPage_Depot';
-import InfoPage from './pages/InfoDepot';
+import InfoPage from './pages/infoDepot/InfoDepot';
 import RegisterAndLogin from './pages/login/RegisterAndLogin';
 import ForgotPassword from './pages/login/ForgotPassword';
 

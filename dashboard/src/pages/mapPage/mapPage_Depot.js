@@ -35,7 +35,7 @@ const MapPage_depot = () => {
             </div>
 
             <div className={`content ${isOpen ? 'open' : 'closed'}`} >
-                <GoogleMap_depot initialCenter={mapCenter} initialZoom = {13} />
+                <GoogleMap_depot initialCenter={mapCenter} initialZoom = {7} />
             </div>
         </div>
     );

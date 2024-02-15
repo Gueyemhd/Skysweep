@@ -1,6 +1,6 @@
-import InfoTolBar from "../components/infoTolBar/infoTolBar"; 
+import InfoTolBar from "../../components/infoTolBar/infoTolBar"; 
 import "./infoDepot.css"
-import MyDepot from "../utils/depot.png"
+import MyDepot from "../../utils/depot.png"
 
 //for test
 const InfoPage = () => {
