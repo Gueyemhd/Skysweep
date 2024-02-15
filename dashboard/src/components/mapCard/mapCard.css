@@ -48,7 +48,17 @@
     background-color: #F4F5F4;
   }
   
-  .buttonSubmit{
+  .buttonSubmits{
+    background-color: #F4F5F4;
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+    font-weight: 800;
+    border: none;
+    margin-left: 10px;
+  }
+  
+  .buttonSubmit_depot{
     background-color: #F4F5F4;
     height: 40px;
     width: 40px;

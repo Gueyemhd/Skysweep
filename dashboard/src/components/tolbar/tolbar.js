@@ -41,7 +41,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
                 <img className='' src={droneImage} />
             </div>
 
-            <div className={`carteButton ${isOpen1 ? 'open' : 'closed'}`}>
+            <div onClick={() => navigate('/map')} className={`carteButton ${isOpen1 ? 'open' : 'closed'}`}>
                 <div>
                     carte
                 </div>
@@ -50,7 +50,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
                 </button>
             </div>
 
-            <div onClick={() => navigate('/info')} className={`depots ${isOpen1 ? 'open' : 'closed'}`}>
+            <div onClick={() => navigate('/depot')} className={`depots ${isOpen1 ? 'open' : 'closed'}`}>
                 <div>
                     dépots détectés
                 </div>

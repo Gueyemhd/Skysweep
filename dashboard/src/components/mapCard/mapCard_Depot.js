@@ -1,18 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import app from '../../services/firebase';
 import {getFirestore, collection, onSnapshot} from 'firebase/firestore'
-import "./mapCard.css";
+import "./mapCard.css"
 import SearchIcon from '@mui/icons-material/Search';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ImageIcon from '@mui/icons-material/Image';
 import axios from 'axios';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import {
+  setKey,
+  setDefaults,
+  setLanguage,
+  setRegion,
+  fromAddress,
+  fromLatLng,
+  fromPlaceId,
+  setLocationType,
+  geocode,
+  RequestType,
+} from "react-geocode";
 
 
 
-
-const GoogleMap_ = ({ initialCenter, initialZoom }) => {
+const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
 
     const [map, setMap] = useState(null);
 
@@ -46,8 +57,6 @@ const GoogleMap_ = ({ initialCenter, initialZoom }) => {
                 mapTypeId: mapType,
             });
 
-            /*
-
             const markers = {};
 
             onSnapshot(dataRef, (snapshot) => {
@@ -77,7 +86,6 @@ const GoogleMap_ = ({ initialCenter, initialZoom }) => {
                 }
               });
             });
-            */
             
             setMap(mapInstance);
         }
@@ -172,7 +180,7 @@ const GoogleMap_ = ({ initialCenter, initialZoom }) => {
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
-            <button className="buttonSubmits" onClick={handleSearch}><HelpOutlineIcon className="HelpOutlineIcon" /></button>
+            <button className="buttonSubmit_depot" onClick={handleSearch}><HelpOutlineIcon className="HelpOutlineIcon" /></button>
           </div>
         </div>
         <div className="topbarCenter">
@@ -221,4 +229,4 @@ const GoogleMap_ = ({ initialCenter, initialZoom }) => {
   )
 };
 
-export default GoogleMap_;
+export default GoogleMap_depot;

@@ -7,8 +7,9 @@ import GoogleMap1 from '../../components/mapCard/mapCard_Depot';
 import {React,useState, useEffect } from 'react';
 import axios from 'axios';
 import GoogleMap_ from '../../components/mapCard/mapCard_';
+import GoogleMap_depot from '../../components/mapCard/mapCard_Depot';
 
-const MapPage1 = () => {
+const MapPage_depot = () => {
     const [mapCenter, setMapCenter] = useState({ lat: 14.758395, lng: -17.394008 });
     //14.758395, -17.394008
 
@@ -39,10 +40,10 @@ const MapPage1 = () => {
             </div>
 
             <div className={`content ${isOpen ? 'open' : 'closed'}`} >
-                <GoogleMap_ initialCenter={mapCenter} initialZoom = {13} />
+                <GoogleMap_depot initialCenter={mapCenter} initialZoom = {13} />
             </div>
         </div>
     );
 }
 
-export default MapPage1;
+export default MapPage_depot;

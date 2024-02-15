@@ -55,6 +55,7 @@ function RegisterAndLogin() {
   const handleReset = ()=>{
     history("/reset");
   }
+
   return (
     <div className="App">
       {/* Registration and login Screen */}
