@@ -123,11 +123,20 @@
     border-radius: 10px;
     margin-top: 30px;
     color: #5DB075;
-    background-color: #ECFFF1;
+    
     font-size: 1.2vw;
     font-weight: 900;
     font-family: 'Amaranth', sans-serif;;
     
+}
+
+.carteButton:hover{
+    background-color: #ECFFF1;
+    
+}
+
+.carteButton.markers-not-allowed{
+    background-color: #ECFFF1;
 }
 
 .carteButton.closed{
@@ -141,7 +150,7 @@
     border-radius: 10px;
     margin-top: 30px;
     color: #5DB075;
-    background-color: #F4F5F4;
+    
     background-color: none;
     font-size: 1.2vw;
     font-weight: 900;
@@ -182,6 +191,10 @@
     margin: auto;
     margin-top: 20px;
     color: #7A817A;
+}
+
+.depots.markers-allowed{
+    background-color: #ECFFF1;
 }
 
 .depots:hover{

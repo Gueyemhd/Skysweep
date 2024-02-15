@@ -31,7 +31,7 @@ const MapPage_depot = () => {
         <div className='mapPage'>
             
             <div className={`Tolbar ${isOpen ? 'open' : 'closed'}`}>
-                <Tolbar isOpen={isOpen} onToggle={handleToggle}/>
+                <Tolbar isOpen={isOpen} onToggle={handleToggle} areMarkersAllowed = {true}/>
             </div>
 
             <div className={`content ${isOpen ? 'open' : 'closed'}`} >

@@ -7,11 +7,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import LoginIcon from '@mui/icons-material/Login';
 import droneImage from "../../utils/drone.png";
 
-const Tolbar = ({ isOpen, onToggle }) => {
+const Tolbar = ({ isOpen, onToggle, areMarkersAllowed }) => {
 
     const navigate = useNavigate()
 
     const [isOpen1, setIsOpen1] = useState(true);
+    
 
     const handleToggleSidebar = () => {
       setIsOpen1(!isOpen1);
@@ -41,7 +42,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
                 <img className='' src={droneImage} />
             </div>
 
-            <div onClick={() => navigate('/map')} className={`carteButton ${isOpen1 ? 'open' : 'closed'}`}>
+            <div onClick={() => navigate('/map')} className={`carteButton ${isOpen1 ? 'open' : 'closed'} ${areMarkersAllowed ? 'markers-allowed' : 'markers-not-allowed'}`}>
                 <div>
                     carte
                 </div>
@@ -50,7 +51,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
                 </button>
             </div>
 
-            <div onClick={() => navigate('/depot')} className={`depots ${isOpen1 ? 'open' : 'closed'}`}>
+            <div onClick={() => navigate('/depot')} className={`depots ${isOpen1 ? 'open' : 'closed'} ${areMarkersAllowed ? 'markers-allowed' : 'markers-not-allowed'}`}>
                 <div>
                     dépots détectés
                 </div>
