@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react-router-dom";
 import "./tolbar.css"
 import MapIcon from '@mui/icons-material/Map';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
@@ -9,7 +9,8 @@ import droneImage from "../../utils/drone.png";
 
 const Tolbar = ({ isOpen, onToggle }) => {
 
-    
+    const navigate = useNavigate()
+
     const [isOpen1, setIsOpen1] = useState(true);
 
     const handleToggleSidebar = () => {
@@ -49,7 +50,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
                 </button>
             </div>
 
-            <div className={`depots ${isOpen1 ? 'open' : 'closed'}`}>
+            <div onClick={() => navigate('/info')} className={`depots ${isOpen1 ? 'open' : 'closed'}`}>
                 <div>
                     dépots détectés
                 </div>
@@ -74,7 +75,7 @@ const Tolbar = ({ isOpen, onToggle }) => {
                 <div>
                     Se déconnecter
                 </div>
-                <button className={`deconnectButton ${isOpen1 ? 'open' : 'closed'}`}>
+                <button onClick={() => navigate('/')} className={`deconnectButton ${isOpen1 ? 'open' : 'closed'}`}>
                 <LoginIcon/>
                 </button>
                 

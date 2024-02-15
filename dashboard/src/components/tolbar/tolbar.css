@@ -184,6 +184,11 @@
     color: #7A817A;
 }
 
+.depots:hover{
+    background-color: #ECFFF1;
+    
+}
+
 .depots > div{
     margin-top: 5px;
 }

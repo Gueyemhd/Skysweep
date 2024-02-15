@@ -5,18 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16b6417-82e6-4f92-8d24-53aa1a7988a1" name="Changes" comment="[Fix] docker-compose.yaml Version">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/pages/login/ForgotPassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/pages/login/PasswordLoginWithFirebase.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/pages/login/RegisterAndLogin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/utils/drone1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/utils/droneAnime.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/utils/drone_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/utils/pngocean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/utils/skySweep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/src/utils/spaceAg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/components/infoTolBar/infoTolBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/components/infoTolBar/infoTolBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard_.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/mapCard/mapCard_.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/tolbar/tolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/InfoDepot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/infoDepot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/mapPage/mapPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/pages/mapPage/mapPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/src/services/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/services/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/utils/drone.png" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/utils/drone.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +141,7 @@
       <workItem from="1704584159308" duration="2147000" />
       <workItem from="1704963049701" duration="599000" />
       <workItem from="1707777565244" duration="419000" />
+      <workItem from="1707952595845" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="[Fix] docker-compose.yaml Version">
       <option name="closed" value="true" />
