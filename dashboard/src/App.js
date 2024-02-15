@@ -2,13 +2,7 @@ import './App.css';
 import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Redirect, Navigate } from "react-router-dom";
-import GoogleMap from './components/mapCard/mapCard';
-import GoogleMap1 from './components/mapCard/mapCard_Depot';
 
-import firebase from 'firebase/app';
-
-import Topbar from "./components/topbar/Topbar";
-import MapPage from './pages/mapPage/mapPage_Depot';
 import MapPage1 from './pages/mapPage/mapPage1';
 import MapPage_depot from './pages/mapPage/mapPage_Depot';
 import InfoPage from './pages/InfoDepot';

@@ -1,9 +1,5 @@
-import Topbar from '../../components/topbar/Topbar';
-import GoogleMap from '../../components/mapCard/mapCard';
 import "./mapPage.css"
 import Tolbar from '../../components/tolbar/tolbar';
-import Topbar1 from '../../components/topbar/Topabar1';
-import GoogleMap1 from '../../components/mapCard/mapCard_Depot';
 import {React,useState, useEffect } from 'react';
 import axios from 'axios';
 import GoogleMap_ from '../../components/mapCard/mapCard_';
