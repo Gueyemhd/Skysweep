@@ -21,7 +21,7 @@ function App() {
           <Route path="/reset" element={<ForgotPassword/>} />
           <Route path="/map" element={ <MapPage1/>} />
           <Route path="/depot" element={ <MapPage_depot/>} />
-          <Route path="/info" element={ <InfoPage/>} />
+          <Route path="/info/:id" element={ <InfoPage/>} />
         </Routes>
          
       </div>

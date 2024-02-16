@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import app from '../../services/firebase';
 import {getFirestore, collection, onSnapshot} from 'firebase/firestore'
+import { useNavigate } from "react-router-dom";
 import "./mapCard.css"
 import SearchIcon from '@mui/icons-material/Search';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -14,13 +15,15 @@ import MenuItem from '@mui/material/MenuItem';
 
 const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
 
+    const navigate = useNavigate()
+
     const [map, setMap] = useState(null);
 
     const [center, setCenter] = useState(initialCenter);
 
     const [zoom, setZoom] = useState(initialZoom);
 
-    const [mapType, setMapType] = useState('satellite');
+    const [mapType, setMapType] = useState('terrain');
 
     const handleChange = (event) => {
       setMapType(event.target.value);
@@ -47,12 +50,14 @@ const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
             });
 
             const markers = {};
+           
 
             onSnapshot(dataRef, (snapshot) => {
               snapshot.docChanges().forEach((change) => {
                 const point = change.doc.data();
                 const id = change.doc.id;
-                console.log(point)
+               
+
 
                 if (change.type === 'added' || change.type === 'modified') {
                   // Créer ou mettre à jour le marqueur
@@ -67,7 +72,9 @@ const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
                   });
 
                   markers[id].addListener('click', () => {
-                    infowindow.open(mapInstance, markers[id]);
+                    const url = `/info/${id}`
+                    navigate(url)
+                    // infowindow.open(mapInstance, markers[id]);
                   });
                 } else if (change.type === 'removed') {
                   markers[id].setMap(null);
@@ -81,7 +88,7 @@ const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
 
         if (!window.google) {
             const script = document.createElement('script');
-            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBB3mmlEaF5jkGsxRUkPFbRe80Lyt_PbZw&callback=initMap";
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBGJR8T0Jt93-OGJMMUPOm_jJI7x8twE-o=initMap";
             script.async = true;
             script.defer = true;
             document.head.appendChild(script);
@@ -101,41 +108,41 @@ const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
 
     const [city, setCity] = useState('');
 
-    const cities = {
-      "dakar": { lat: 14.6928, lng: -17.4467 },
-      "pikine": {lat: 14.758395, lng: -17.394008 },
-      "yoff" : {lat : 14.747070, lng : -17.490230},
-      "keur massar" : {lat : 14.786003, lng : -17.311729}
-      // Ajoutez d'autres villes avec leurs coordonnées
-    };
+    // const cities = {
+    //   "dakar": { lat: 14.6928, lng: -17.4467 },
+    //   "pikine": {lat: 14.758395, lng: -17.394008 },
+    //   "yoff" : {lat : 14.747070, lng : -17.490230},
+    //   "keur massar" : {lat : 14.786003, lng : -17.311729}
+    //   // Ajoutez d'autres villes avec leurs coordonnées
+    // };
 
-    /*
+    
     const handleSearch = () => {
-      axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBB3mmlEaF5jkGsxRUkPFbRe80Lyt_PbZw`)
+      axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBGJR8T0Jt93-OGJMMUPOm_jJI7x8twE-o`)
         .then(response => {
-          //const location = response.data.results[0].geometry.location;
-          setCenter({ lat: 14.7928, lng: -17.4467 });
-          setZoom(15)
-          //console.log(mapCenter)
+          // console.log("=====Response=====")
+          // console.log(response.data)
+          const location = response.data.results[0].geometry.location;
+          setCenter({ lat: location.lat, lng: location.lng });
+          setZoom(10);
         })
         .catch(error => {
           console.error('Erreur lors de la récupération des données:', error);
         });
     };
-    */
 
-    const handleSearch = () => {
-      // Vérifie si la ville est dans la liste
-      if (city.toLowerCase() in cities) {
-        // Récupère les coordonnées de la ville
-        const { lat, lng } = cities[city.toLowerCase()];
-        // Centre la carte sur les coordonnées de la ville
-        setCenter({ lat, lng });
-        setZoom(15);
-      } else {
-        console.log("Ville non trouvée dans la liste.");
-      }
-    };
+    // const handleSearch = () => {
+    //   // Vérifie si la ville est dans la liste
+    //   if (city.toLowerCase() in cities) {
+    //     // Récupère les coordonnées de la ville
+    //     const { lat, lng } = cities[city.toLowerCase()];
+    //     // Centre la carte sur les coordonnées de la ville
+    //     setCenter({ lat, lng });
+    //     setZoom(15);
+    //   } else {
+    //     console.log("Ville non trouvée dans la liste.");
+    //   }
+    // };
     
 
     /* Configuration de la clé API de Google Maps Geocoding
@@ -177,14 +184,14 @@ const GoogleMap_depot = ({ initialCenter, initialZoom }) => {
         </div>
         <div className="topbarRight">
 
-          <div>
-            <Select className="MapTypeDropdown" value={mapType} onChange={handleChange} style={{ position: 'absolute', top: 800, left: 100, zIndex:100}}>
+          {/* <div>
+            <Select className="MapTypeDropdown" value={mapType} onChange={handleChange}>
               <MenuItem value="roadmap">Plan</MenuItem>
               <MenuItem value="satellite">Satellite</MenuItem>
               <MenuItem value="hybrid">Hybride</MenuItem>
               <MenuItem value="terrain">Relief</MenuItem>
             </Select>
-          </div>
+          </div> */}
 
           <div className="topbarImg">
           <ImageIcon className = "imgIcon"/>
