@@ -10,28 +10,37 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { useNavigate } from "react-router-dom";
 import droneImage from "../../utils/drone.png";
+import { getStorage, ref, deleteObject} from "firebase/storage";
+import { getFirestore, doc, deleteDoc} from "firebase/firestore";
 
-const InfoTolBar = ({ville, lng, lat, seconds, nanoseconds}) => {
+const db = getFirestore();
+
+const InfoTolBar = ({ville, lng, lat, date, id, name}) => {
+    const docRef = doc(db, "points", id);
+    const storage = getStorage();
+    const fileRef = ref(storage, "gs://skysweep-393a1.appspot.com"+name);
     const navigate = useNavigate()
-    var firebaseTimestamp = {
-        seconds: seconds,
-        nanoseconds: nanoseconds
-    };
+    // var firebaseTimestamp = {
+    //     seconds: seconds,
+    //     nanoseconds: nanoseconds
+    // };
     
-    // Créez un objet Date en utilisant les secondes et les nanosecondes
-    var milliseconds = firebaseTimestamp.seconds * 1000 + Math.floor(firebaseTimestamp.nanoseconds / 1000000);
-    var date = new Date(milliseconds);
-    
+    // // Créez un objet Date en utilisant les secondes et les nanosecondes
+    // var milliseconds = firebaseTimestamp.seconds * 1000 + Math.floor(firebaseTimestamp.nanoseconds / 1000000);
+    // var date = new Date(milliseconds);
     // console.log("=====Recu=====")
     // console.log(datetime)
-    var year = date.getUTCFullYear(); // Année en UTC
-    var month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // Mois en UTC
-    var day = date.getUTCDate().toString().padStart(2, '0'); // Jour en UTC
-    var hours = date.getUTCHours().toString().padStart(2, '0'); // Heures en UTC
-    var minutes = date.getUTCMinutes().toString().padStart(2, '0');
+    // var year = date.getUTCFullYear(); // Année en UTC
+    // var month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // Mois en UTC
+    // var day = date.getUTCDate().toString().padStart(2, '0'); // Jour en UTC
+    // var hours = date.getUTCHours().toString().padStart(2, '0'); // Heures en UTC
+    // var minutes = date.getUTCMinutes().toString().padStart(2, '0');
 
-    var formattedDate = `${day}-${month}-${year}`
-    var formamttedTime = `${hours}h:${minutes}mn`
+    // var formattedDate = `${day}-${month}-${year}`
+    // var formattedTime = `${hours}h:${minutes}mn`
+
+    var formattedDate = date.slice(0, -9)
+    var formattedTime = date.slice(-9)
 
     return (
         <div className='infoTolbarContent'>
@@ -85,10 +94,19 @@ const InfoTolBar = ({ville, lng, lat, seconds, nanoseconds}) => {
 
             <div className="inf">
                 <AccessTimeIcon className="green"/>
-                <div>{formamttedTime}</div>
+                <div>{formattedTime}</div>
             </div>
 
-            <div className="">
+            <div className="" onClick={()=>{ deleteObject(fileRef).then(() => {
+                // console.log('Le fichier a été supprimé avec succès.');
+                deleteDoc(docRef).then(() => {
+                    navigate('/depot');
+                  }).catch((error) => {
+                    console.error('Une erreur s\'est produite lors de la suppression du document :', error);
+                  });
+                }).catch((error) => {
+                console.error('Une erreur s\'est produite lors de la suppression du fichier :', error);
+                });}}>
                 <button className='retirer'>retirer</button>
             </div>
 {/* 
