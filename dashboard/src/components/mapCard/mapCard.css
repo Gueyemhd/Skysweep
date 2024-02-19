@@ -2,6 +2,7 @@
     height: 7vh;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     background-color: white;
     align-items: center;
     position: sticky;
@@ -74,13 +75,17 @@
   }
   
   .topbarRight {
+    display: flex;
+    justify-content: end;
     height: 40px;
     flex: 3;
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     color: white;
-    margin-right: 40px;
+    padding-right: 10px;
+
+    /* margin-right: 40px; */
     
   }
   
